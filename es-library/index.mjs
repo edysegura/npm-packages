@@ -4,8 +4,11 @@ export default function eyeLogger(data) {
 }
 
 function getFileName() {
-  const stack = new Error().stack;
-  const callerLine = stack.split("\n")[3]; // Get the caller's line (index 3 has the actual caller)
-  const match = callerLine.match(/\/[\w-_]+(\.\w+)+/);
-  return match ? match[0].split("/").pop() : "unknown";
+  const error = new Error();
+  const stack = error.stack.split("\n");
+  const fileName = stack
+    .at(3)
+    .match(/([^\/]+\.mjs)/)
+    .shift();
+  return fileName;
 }
