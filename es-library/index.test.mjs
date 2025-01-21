@@ -12,10 +12,14 @@ describe("eyeLogger", () => {
       originalLog(loggedOutput);
     };
 
-    // Test the logger
-    eyeLogger("test message");
-
-    // Assert that the output contains the file name and message
-    assert.ok(loggedOutput.includes("[index.test.mjs]"));
+    try {
+      // Test the logger
+      eyeLogger("test message");
+      // Assert that the output contains the file name and message
+      assert.ok(loggedOutput.includes("[index.test.mjs]"));
+    } finally {
+      // Restore the original console.log
+      console.log = originalLog;
+    }
   });
 });
