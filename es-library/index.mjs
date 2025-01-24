@@ -8,7 +8,7 @@ function getFileName() {
   const stack = error.stack.split("\n");
   const fileName = stack
     .at(3)
-    .match(/([^\/]+\.mjs)/)
+    .match(/([^\/]+\.(mjs|js|ts))/)
     .shift();
   return fileName;
 }
