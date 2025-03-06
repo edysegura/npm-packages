@@ -1,3 +1,3 @@
-import eyeLogger from "es-library";
+import eyeLogger from 'es-library'
 
-eyeLogger(`Hi mon! I'm here!`);
+eyeLogger(`Hi mon! I'm here!`)
