@@ -1,3 +1,3 @@
-import eyeLogger from "../es-library/index.mjs";
+import eyeLogger from "es-library";
 
 eyeLogger(`Hi mon! I'm here!`);

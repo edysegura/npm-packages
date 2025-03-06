@@ -1,0 +1,22 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      es-library:
+        specifier: file:../es-library
+        version: file:../es-library
+
+packages:
+
+  es-library@file:../es-library:
+    resolution: {directory: ../es-library, type: directory}
+
+snapshots:
+
+  es-library@file:../es-library: {}
